@@ -1,0 +1,315 @@
+/*
+=========================================================
+PHRENOGHAGIA THEME
+07 - FAVORITES
+=========================================================
+*/
+
+
+/*=======================================================
+    FAVORITES ROOT
+=======================================================*/
+
+.cc-favourites{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fill,minmax(130px,1fr));
+
+    gap:22px;
+
+    padding:24px;
+
+}
+
+
+/*=======================================================
+    FAVORITE CARD
+=======================================================*/
+
+.cc-favourites .b-catalog_entry{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    background:none;
+
+    border:none;
+
+    box-shadow:none;
+
+}
+
+
+/*=======================================================
+    COVER
+=======================================================*/
+
+.cc-favourites .cover{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+}
+
+
+.cc-favourites .cover img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+        transform .6s var(--ease),
+        filter .6s var(--ease);
+
+}
+
+
+.cc-favourites .cover::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            transparent,
+
+            rgba(12,13,12,.88)
+
+        );
+
+    opacity:.55;
+
+    transition:.35s;
+
+}
+
+
+.cc-favourites .b-catalog_entry:hover .cover::after{
+
+    opacity:.9;
+
+}
+
+
+.cc-favourites .b-catalog_entry:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+/*=======================================================
+    TITLE
+=======================================================*/
+
+.cc-favourites .title{
+
+    margin-top:14px;
+
+    color:var(--text);
+
+    font-size:13px;
+
+    line-height:1.45;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+
+.cc-favourites .b-catalog_entry:hover .title{
+
+    color:var(--accent);
+
+}
+
+
+/*=======================================================
+    CHARACTER GRID
+=======================================================*/
+
+.cc-favourites.characters{
+
+    grid-template-columns:
+        repeat(auto-fill,minmax(90px,1fr));
+
+}
+
+
+.cc-favourites.characters .cover{
+
+    border-radius:20px;
+
+}
+
+
+.cc-favourites.characters img{
+
+    aspect-ratio:1;
+
+}
+
+
+/*=======================================================
+    MANGA / ANIME LABEL
+=======================================================*/
+
+.cc-favourites .kind{
+
+    position:absolute;
+
+    top:12px;
+
+    left:12px;
+
+    padding:
+
+        5px
+        10px;
+
+    border-radius:999px;
+
+    background:
+
+        rgba(15,18,15,.65);
+
+    backdrop-filter:blur(12px);
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+    color:var(--text-soft);
+
+    font-size:11px;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+}
+
+
+/*=======================================================
+    HOVER GLOW
+=======================================================*/
+
+.cc-favourites .b-catalog_entry::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:26px;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(255,255,255,.10),
+
+            transparent 45%
+
+        );
+
+    opacity:0;
+
+    transition:.4s;
+
+    pointer-events:none;
+
+}
+
+
+.cc-favourites .b-catalog_entry:hover::before{
+
+    opacity:1;
+
+}
+
+
+/*=======================================================
+    FAVORITE PERSONS
+=======================================================*/
+
+.cc-favourites .b-person{
+
+    text-align:center;
+
+}
+
+
+.cc-favourites .b-person img{
+
+    width:100%;
+
+    aspect-ratio:1;
+
+    border-radius:22px;
+
+}
+
+
+/*=======================================================
+    EMPTY
+=======================================================*/
+
+.cc-favourites .b-nothing_here{
+
+    grid-column:1/-1;
+
+    padding:40px;
+
+    text-align:center;
+
+    color:var(--text-muted);
+
+}
+
+
+/*=======================================================
+    MOBILE
+=======================================================*/
+
+@media(max-width:700px){
+
+    .cc-favourites{
+
+        grid-template-columns:
+            repeat(auto-fill,minmax(95px,1fr));
+
+        gap:14px;
+
+        padding:16px;
+
+    }
+
+    .cc-favourites .title{
+
+        font-size:12px;
+
+    }
+
+}
