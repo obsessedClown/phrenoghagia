@@ -1,0 +1,494 @@
+/*
+=========================================================
+PHRENOGHAGIA THEME
+08 - EXTRA
+=========================================================
+*/
+
+
+/*=======================================================
+    LISTS INFO
+=======================================================*/
+
+.c-lists-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+.c-lists-info>.b-stats_bar{
+
+    padding:18px;
+
+}
+
+
+/*=======================================================
+    STATS TITLE
+=======================================================*/
+
+.b-stats_bar .title{
+
+    margin-bottom:14px;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+}
+
+
+.b-stats_bar .stat_name{
+
+    color:var(--text-soft);
+
+}
+
+
+.b-stats_bar .stat_name a{
+
+    color:inherit;
+
+}
+
+
+.b-stats_bar .stat_name a:hover{
+
+    color:var(--accent);
+
+}
+
+
+/*=======================================================
+    PROGRESS
+=======================================================*/
+
+.b-stats_bar .line{
+
+    margin-top:10px;
+
+}
+
+
+.b-stats_bar .bar{
+
+    height:12px;
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+
+.b-stats_bar .bar div{
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #d8d0bc,
+
+            #8f9b7c
+
+        );
+
+}
+
+
+/*=======================================================
+    ACHIEVEMENTS
+=======================================================*/
+
+.cc-achievements{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    padding:22px;
+
+}
+
+
+.b-achievement{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:16px;
+
+    border-radius:18px;
+
+    background:
+
+        rgba(255,255,255,.03);
+
+    transition:.35s;
+
+}
+
+
+.b-achievement:hover{
+
+    transform:translateX(6px);
+
+    background:
+
+        rgba(255,255,255,.06);
+
+}
+
+
+.b-achievement img{
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:18px;
+
+}
+
+
+.b-achievement .name{
+
+    color:var(--text);
+
+}
+
+
+.b-achievement .hint{
+
+    color:var(--text-muted);
+
+}
+
+
+/*=======================================================
+    ACTIVITY
+=======================================================*/
+
+.activity{
+
+    padding:24px;
+
+}
+
+
+.activity .graph{
+
+    margin-top:20px;
+
+}
+
+
+.activity rect{
+
+    rx:5;
+
+    transition:.3s;
+
+}
+
+
+.activity rect:hover{
+
+    opacity:.75;
+
+}
+
+
+/*=======================================================
+    COMMENTS
+=======================================================*/
+
+.b-comment{
+
+    position:relative;
+
+    padding:22px;
+
+    border-radius:22px;
+
+    background:
+
+        rgba(255,255,255,.025);
+
+    transition:.35s;
+
+}
+
+
+.b-comment:hover{
+
+    background:
+
+        rgba(255,255,255,.05);
+
+}
+
+
+.b-comment .body{
+
+    line-height:1.75;
+
+    color:var(--text-soft);
+
+}
+
+
+.b-comment .author{
+
+    color:var(--text);
+
+    margin-bottom:12px;
+
+}
+
+
+/*=======================================================
+    FORUM POSTS
+=======================================================*/
+
+.b-topic{
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+
+.b-topic:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+.b-topic .title{
+
+    color:var(--text);
+
+}
+
+
+.b-topic .title:hover{
+
+    color:var(--accent);
+
+}
+
+
+/*=======================================================
+    HISTORY
+=======================================================*/
+
+.c-history{
+
+    display:none !important;
+
+}
+
+
+/*=======================================================
+    TIMELINE
+=======================================================*/
+
+.b-log_entry{
+
+    position:relative;
+
+    padding-left:28px;
+
+}
+
+
+.b-log_entry::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:8px;
+
+    top:10px;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:
+
+        var(--accent);
+
+}
+
+
+.b-log_entry::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:11px;
+
+    top:18px;
+
+    bottom:-18px;
+
+    width:2px;
+
+    background:
+
+        rgba(255,255,255,.08);
+
+}
+
+
+.b-log_entry:last-child::after{
+
+    display:none;
+
+}
+
+
+/*=======================================================
+    USER MENU
+=======================================================*/
+
+.profile-actions a{
+
+    transition:.3s;
+
+}
+
+
+.profile-actions a:hover{
+
+    transform:
+
+        translateY(-3px)
+
+        scale(1.05);
+
+}
+
+
+/*=======================================================
+    SELECTION
+=======================================================*/
+
+::selection{
+
+    background:
+
+        rgba(215,205,180,.28);
+
+    color:#fff;
+
+}
+
+
+/*=======================================================
+    NOISE
+=======================================================*/
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.16;
+
+    mix-blend-mode:overlay;
+
+    background:
+
+        repeating-linear-gradient(
+
+            0deg,
+
+            rgba(255,255,255,.02),
+
+            rgba(255,255,255,.02) 1px,
+
+            transparent 1px,
+
+            transparent 3px
+
+        );
+
+}
+
+
+/*=======================================================
+    FADE IN
+=======================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+
+.profile-content>*{
+
+    animation:
+
+        fadeUp
+
+        .8s
+
+        var(--ease)
+
+        both;
+
+}
