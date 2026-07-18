@@ -1,0 +1,404 @@
+/*
+=========================================================
+PHRENOPHAGIA THEME
+05 - PROFILE
+=========================================================
+*/
+
+
+/*=======================================================
+    PROFILE CONTENT
+=======================================================*/
+
+.profile-content{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        340px;
+
+    gap:32px;
+
+    align-items:start;
+
+}
+
+
+/*=======================================================
+    COLUMNS
+=======================================================*/
+
+.profile-content>.c-left,
+.profile-content>.c-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+    min-width:0;
+
+}
+
+
+/*=======================================================
+    DEFAULT BLOCK
+=======================================================*/
+
+.b-block,
+.block,
+.cc,
+.cc-2,
+.cc-3,
+.b-height_shortener{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        var(--glass-light),
+        var(--surface);
+
+    backdrop-filter:var(--glass);
+
+    border:var(--card-border);
+
+    border-radius:var(--card-radius);
+
+    box-shadow:var(--card-shadow);
+
+    transition:
+        background .35s var(--ease),
+        border-color .35s var(--ease),
+        transform .35s var(--ease),
+        box-shadow .35s var(--ease);
+
+}
+
+
+/*=======================================================
+    HOVER
+=======================================================*/
+
+.b-block:hover,
+.block:hover,
+.cc:hover,
+.cc-2:hover,
+.cc-3:hover{
+
+    transform:translateY(-5px);
+
+    background:
+        var(--glass-light),
+        var(--surface-hover);
+
+    border-color:
+        rgba(255,255,255,.13);
+
+}
+
+
+/*=======================================================
+    INNER
+=======================================================*/
+
+.b-block>.inner,
+.block>.inner,
+.cc>.inner,
+.cc-2>.inner,
+.cc-3>.inner{
+
+    padding:22px;
+
+}
+
+
+/*=======================================================
+    HEADLINES
+=======================================================*/
+
+.subheadline{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:
+
+        18px
+        22px;
+
+    margin:0;
+
+    border:none;
+
+    border-bottom:
+
+        1px solid rgba(255,255,255,.06);
+
+    background:transparent;
+
+    text-transform:uppercase;
+
+    letter-spacing:.18em;
+
+    font-size:12px;
+
+    color:var(--text);
+
+}
+
+
+.subheadline a{
+
+    color:inherit;
+
+}
+
+
+/*=======================================================
+    LISTS
+=======================================================*/
+
+ul,
+ol{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+
+/*=======================================================
+    TEXT
+=======================================================*/
+
+p{
+
+    line-height:1.75;
+
+    color:var(--text-soft);
+
+}
+
+
+strong{
+
+    color:var(--text);
+
+}
+
+
+small{
+
+    color:var(--text-muted);
+
+}
+
+
+/*=======================================================
+    LINKS
+=======================================================*/
+
+a{
+
+    color:var(--accent);
+
+    transition:
+
+        color .3s var(--ease);
+
+}
+
+
+a:hover{
+
+    color:#ffffff;
+
+}
+
+
+/*=======================================================
+    TABLES
+=======================================================*/
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+td{
+
+    padding:
+
+        10px
+        0;
+
+    border-bottom:
+
+        1px solid rgba(255,255,255,.05);
+
+}
+
+
+/*=======================================================
+    SCROLLBAR
+=======================================================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+    height:8px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:#111412;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:#747b69;
+
+    border-radius:999px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#9aa38a;
+
+}
+
+
+/*=======================================================
+    CODE
+=======================================================*/
+
+pre,
+code{
+
+    border-radius:12px;
+
+    background:
+
+        rgba(255,255,255,.04);
+
+}
+
+
+/*=======================================================
+    IMAGES
+=======================================================*/
+
+img{
+
+    transition:
+
+        transform .35s var(--ease),
+
+        filter .35s var(--ease);
+
+}
+
+
+/*=======================================================
+    SPOILERS
+=======================================================*/
+
+.b-spoiler{
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+}
+
+
+.b-spoiler>.content{
+
+    padding:18px;
+
+}
+
+
+/*=======================================================
+    QUOTES
+=======================================================*/
+
+blockquote{
+
+    margin:0;
+
+    padding:
+
+        18px
+        22px;
+
+    border-left:
+
+        3px solid var(--accent);
+
+    background:
+
+        rgba(255,255,255,.03);
+
+    color:var(--text-soft);
+
+}
+
+
+/*=======================================================
+    MOBILE
+=======================================================*/
+
+@media(max-width:1200px){
+
+.profile-content{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+@media(max-width:700px){
+
+.subheadline{
+
+padding:
+
+16px
+18px;
+
+letter-spacing:.12em;
+
+}
+
+.block>.inner,
+.b-block>.inner{
+
+padding:18px;
+
+}
+
+}
