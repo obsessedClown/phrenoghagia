@@ -1,0 +1,584 @@
+/*
+=========================================================
+PHRENOGHAGIA THEME
+06 - CARDS
+=========================================================
+*/
+
+
+/*=======================================================
+    COMMON CARD SYSTEM
+=======================================================*/
+
+
+.b-catalog_entry,
+.c-column,
+.b-entry,
+.b-user_rate,
+.b-message,
+.b-comments,
+.b-review,
+.b-list_item{
+
+    position:relative;
+
+    background:
+        var(--glass-light),
+        var(--surface);
+
+    backdrop-filter:var(--glass);
+
+    border:
+
+        var(--card-border);
+
+    border-radius:
+
+        var(--card-radius);
+
+    overflow:hidden;
+
+    box-shadow:
+
+        var(--card-shadow);
+
+    transition:
+
+        transform .35s var(--ease),
+
+        background .35s var(--ease),
+
+        border-color .35s var(--ease);
+
+}
+
+
+
+.b-catalog_entry:hover,
+.b-entry:hover,
+.b-user_rate:hover,
+.b-message:hover,
+.b-review:hover,
+.b-list_item:hover{
+
+    transform:
+
+        translateY(-5px);
+
+    background:
+
+        var(--glass-light),
+
+        var(--surface-hover);
+
+    border-color:
+
+        var(--line-hover);
+
+}
+
+
+
+/*=======================================================
+    ENTRY IMAGE
+=======================================================*/
+
+
+.b-catalog_entry .cover{
+
+    overflow:hidden;
+
+}
+
+
+.b-catalog_entry img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+
+        transform .5s var(--ease),
+
+        filter .5s var(--ease);
+
+}
+
+
+.b-catalog_entry:hover img{
+
+    transform:
+
+        scale(1.08);
+
+    filter:
+
+        brightness(1.05);
+
+}
+
+
+
+/*=======================================================
+    CATALOG GRID
+=======================================================*/
+
+
+.cc-entries{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(
+
+            auto-fill,
+
+            minmax(120px,1fr)
+
+        );
+
+    gap:22px;
+
+    padding:22px;
+
+}
+
+
+
+/*=======================================================
+    ENTRY TITLE
+=======================================================*/
+
+
+.b-catalog_entry .title{
+
+    padding:
+
+        12px;
+
+    color:
+
+        var(--text);
+
+    font-size:
+
+        13px;
+
+    line-height:
+
+        1.4;
+
+    text-align:center;
+
+}
+
+
+
+.b-catalog_entry .title:hover{
+
+    color:
+
+        var(--accent);
+
+}
+
+
+
+/*=======================================================
+    FAVOURITES
+=======================================================*/
+
+
+.cc-favourites{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(
+
+            auto-fill,
+
+            minmax(130px,1fr)
+
+        );
+
+    gap:
+
+        22px;
+
+    padding:
+
+        22px;
+
+}
+
+
+.cc-favourites .b-catalog_entry{
+
+    aspect-ratio:
+
+        0.72;
+
+}
+
+
+
+/*=======================================================
+    CHARACTERS
+=======================================================*/
+
+
+.cc-characters{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(
+
+            auto-fill,
+
+            minmax(85px,1fr)
+
+        );
+
+    gap:
+
+        18px;
+
+    padding:
+
+        22px;
+
+}
+
+
+.cc-characters img{
+
+    width:
+
+        85px;
+
+    height:
+
+        85px;
+
+    object-fit:cover;
+
+    border-radius:
+
+        22px;
+
+}
+
+
+
+/*=======================================================
+    FRIENDS
+=======================================================*/
+
+
+.cc-friends{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(
+
+            auto-fill,
+
+            minmax(70px,1fr)
+
+        );
+
+    gap:
+
+        18px;
+
+    padding:
+
+        22px;
+
+}
+
+
+.cc-friends .b-user16{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+.cc-friends img{
+
+    width:
+
+        70px;
+
+    height:
+
+        70px;
+
+    border-radius:
+
+        22px;
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+}
+
+
+.cc-friends img:hover{
+
+    transform:
+
+        translateY(-5px)
+
+        scale(1.05);
+
+}
+
+
+
+/*=======================================================
+    TAGS
+=======================================================*/
+
+
+.tag,
+
+.b-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:
+
+        7px
+
+        13px;
+
+    margin:
+
+        4px;
+
+    border-radius:
+
+        999px;
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+    color:
+
+        var(--text-soft);
+
+    transition:
+
+        all .3s var(--ease);
+
+}
+
+
+.tag:hover,
+.b-tag:hover{
+
+    background:
+
+        rgba(255,255,255,.12);
+
+    color:
+
+        var(--text);
+
+}
+
+
+
+/*=======================================================
+    USER RATES
+=======================================================*/
+
+
+.b-user_rate{
+
+    padding:
+
+        18px;
+
+}
+
+
+.b-user_rate .score{
+
+    color:
+
+        var(--accent);
+
+    font-size:
+
+        22px;
+
+}
+
+
+
+.b-user_rate .stars{
+
+    color:
+
+        #d7cfad;
+
+}
+
+
+
+/*=======================================================
+    COMMENTS
+=======================================================*/
+
+
+.b-message{
+
+    padding:
+
+        22px;
+
+}
+
+
+.b-message .body{
+
+    color:
+
+        var(--text-soft);
+
+    line-height:
+
+        1.7;
+
+}
+
+
+.b-message .name{
+
+    color:
+
+        var(--text);
+
+    font-weight:
+
+        500;
+
+}
+
+
+
+/*=======================================================
+    ACHIEVEMENTS
+=======================================================*/
+
+
+.b-achievement{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:
+
+        18px;
+
+    padding:
+
+        18px;
+
+    background:
+
+        rgba(255,255,255,.025);
+
+    border-radius:
+
+        18px;
+
+}
+
+
+
+.b-achievement img{
+
+    width:
+
+        60px;
+
+    height:
+
+        60px;
+
+    border-radius:
+
+        18px;
+
+}
+
+
+
+/*=======================================================
+    MOBILE
+=======================================================*/
+
+
+@media(max-width:700px){
+
+
+.cc-entries,
+.cc-favourites{
+
+    grid-template-columns:
+
+        repeat(
+
+            auto-fill,
+
+            minmax(95px,1fr)
+
+        );
+
+    gap:
+
+        14px;
+
+}
+
+
+.cc-characters{
+
+    grid-template-columns:
+
+        repeat(
+
+            auto-fill,
+
+            minmax(70px,1fr)
+
+        );
+
+}
+
+}
