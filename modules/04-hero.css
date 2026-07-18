@@ -1,0 +1,497 @@
+/*
+=========================================================
+PHRENOPHAGIA THEME
+04 - HERO
+=========================================================
+*/
+
+
+/*=======================================================
+    HERO GRID
+=======================================================*/
+
+.profile-head{
+
+    isolation:isolate;
+
+}
+
+.profile-head .c-brief{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    justify-content:flex-end;
+
+    gap:24px;
+
+}
+
+.profile-head .head{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    align-items:flex-start;
+
+    height:100%;
+
+    padding-bottom:16px;
+
+}
+
+.profile-head .c-info{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:flex-end;
+
+}
+
+
+
+/*=======================================================
+    AVATAR
+=======================================================*/
+
+.c-brief .avatar{
+
+    width:var(--avatar-size);
+
+    height:var(--avatar-size);
+
+    flex:0 0 var(--avatar-size);
+
+    position:relative;
+
+}
+
+.c-brief .avatar::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-10px;
+
+    border-radius:calc(var(--avatar-radius) + 10px);
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,255,255,.08),
+
+            transparent 70%
+
+        );
+
+    opacity:.65;
+
+    z-index:-1;
+
+}
+
+.c-brief .avatar img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:var(--avatar-radius);
+
+    border:var(--avatar-border);
+
+    box-shadow:var(--avatar-shadow);
+
+    transition:
+
+        transform .45s var(--ease),
+
+        box-shadow .45s var(--ease);
+
+}
+
+.c-brief .avatar:hover img{
+
+    transform:
+
+        translateY(-8px)
+
+        scale(1.02);
+
+    box-shadow:
+
+        0 40px 90px rgba(0,0,0,.55);
+
+}
+
+
+
+/*=======================================================
+    USERNAME
+=======================================================*/
+
+.profile-head h1{
+
+    margin:0;
+
+    padding:0;
+
+    font-size:64px;
+
+    line-height:1;
+
+    font-weight:300;
+
+    letter-spacing:.02em;
+
+    color:var(--text);
+
+    text-shadow:
+
+        0 10px 35px rgba(0,0,0,.45);
+
+}
+
+.profile-head .nickname{
+
+    color:inherit;
+
+}
+
+
+
+/*=======================================================
+    USER META
+=======================================================*/
+
+.profile-head .details,
+
+.profile-head .info,
+
+.profile-head .misc{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:18px;
+
+}
+
+.profile-head .details>*,
+
+.profile-head .info>*,
+
+.profile-head .misc>*{
+
+    padding:
+
+        8px
+
+        15px;
+
+    border-radius:999px;
+
+    background:
+
+        rgba(18,22,19,.42);
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:
+
+        blur(18px);
+
+    color:
+
+        var(--text-soft);
+
+}
+
+
+
+/*=======================================================
+    USER ACTIONS
+=======================================================*/
+
+.profile-head .profile-actions,
+
+.profile-head .actions{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:24px;
+
+}
+
+.profile-head .profile-actions a,
+
+.profile-head .actions a{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:
+
+        rgba(255,255,255,.06);
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+    transition:
+
+        all .35s var(--ease);
+
+}
+
+.profile-head .profile-actions a:hover,
+
+.profile-head .actions a:hover{
+
+    transform:
+
+        translateY(-3px);
+
+    background:
+
+        rgba(255,255,255,.12);
+
+}
+
+
+
+/*=======================================================
+    STATS PANEL
+=======================================================*/
+
+.profile-head .c-info>*{
+
+    width:100%;
+
+}
+
+.profile-head .b-stats_bar{
+
+    background:
+
+        var(--glass-light),
+
+        var(--surface);
+
+    backdrop-filter:
+
+        var(--glass);
+
+    border:
+
+        var(--card-border);
+
+    border-radius:
+
+        var(--card-radius);
+
+    padding:
+
+        18px;
+
+    box-shadow:
+
+        var(--card-shadow);
+
+    transition:
+
+        transform .35s var(--ease),
+
+        background .35s var(--ease);
+
+}
+
+.profile-head .b-stats_bar:hover{
+
+    transform:
+
+        translateY(-4px);
+
+    background:
+
+        var(--glass-light),
+
+        var(--surface-hover);
+
+}
+
+
+
+/*=======================================================
+    STAT BAR
+=======================================================*/
+
+.profile-head .bar{
+
+    height:11px;
+
+    overflow:hidden;
+
+    border-radius:999px;
+
+    background:
+
+        rgba(255,255,255,.05);
+
+}
+
+.profile-head .bar div{
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #d6cfbc,
+
+            #93a07c
+
+        );
+
+}
+
+
+
+/*=======================================================
+    HERO FADE
+=======================================================*/
+
+.profile-head::selection{
+
+    background:
+
+        rgba(255,255,255,.18);
+
+}
+
+
+
+/*=======================================================
+    FLOAT
+=======================================================*/
+
+@keyframes heroFloat{
+
+    0%{
+
+        transform:
+
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+
+            translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:
+
+            translateY(0);
+
+    }
+
+}
+
+.c-brief{
+
+    animation:
+
+        heroFloat
+
+        8s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+
+
+/*=======================================================
+    MOBILE
+=======================================================*/
+
+@media(max-width:1200px){
+
+    .profile-head h1{
+
+        font-size:46px;
+
+    }
+
+    .c-brief{
+
+        align-items:center;
+
+    }
+
+    .profile-head .head{
+
+        align-items:center;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .profile-head h1{
+
+        font-size:34px;
+
+    }
+
+    .c-brief .avatar{
+
+        width:150px;
+
+        height:150px;
+
+        flex-basis:150px;
+
+    }
+
+}
