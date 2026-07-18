@@ -1,0 +1,428 @@
+/*
+=========================================================
+PHRENOGHAGIA THEME
+03 - LAYOUT
+=========================================================
+*/
+
+
+/*=======================================================
+    GLOBAL PAGE
+=======================================================*/
+
+
+body{
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(180,190,160,.08),
+            transparent 35%
+        ),
+        var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+
+
+.l-page{
+
+    max-width:var(--page-width);
+
+    margin:0 auto;
+
+    padding:
+
+        35px
+
+        25px
+
+        60px;
+
+}
+
+
+
+/*=======================================================
+    TOP MENU
+=======================================================*/
+
+
+.l-top_menu-v2{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:var(--z-header);
+
+    background:
+
+        rgba(12,15,13,.68);
+
+    backdrop-filter:var(--glass);
+
+    border-bottom:
+
+        var(--card-border);
+
+}
+
+
+
+/*=======================================================
+    PROFILE ROOT
+=======================================================*/
+
+
+.p-profiles-show{
+
+    width:100%;
+
+}
+
+
+
+.profile-content{
+
+    display:grid;
+
+    grid-template-columns:
+
+        minmax(0, 1fr)
+
+        minmax(300px, 360px);
+
+    gap:var(--content-gap);
+
+    margin-top:var(--section-gap);
+
+}
+
+
+
+/*=======================================================
+    PROFILE HEADER
+=======================================================*/
+
+
+.profile-head{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:
+
+        var(--avatar-size)
+
+        minmax(300px,1fr)
+
+        340px;
+
+
+    align-items:end;
+
+
+    gap:40px;
+
+
+    min-height:var(--hero-height);
+
+
+    padding:
+
+        var(--hero-padding);
+
+
+    overflow:hidden;
+
+
+    border-radius:
+
+        var(--hero-radius);
+
+
+    background:
+
+        var(--hero-overlay),
+
+        var(--hero-image)
+
+        center/
+
+        cover
+
+        no-repeat;
+
+
+    box-shadow:
+
+        var(--hero-shadow);
+
+}
+
+
+
+/*=======================================================
+    HEADER OVERLAY
+=======================================================*/
+
+
+.profile-head::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+
+    background:
+
+        radial-gradient(
+
+            circle at 70% 20%,
+
+            rgba(255,255,255,.12),
+
+            transparent 40%
+
+        );
+
+
+    pointer-events:none;
+
+}
+
+
+
+.profile-head::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    height:220px;
+
+
+    background:
+
+        linear-gradient(
+
+            transparent,
+
+            rgba(10,12,10,.95)
+
+        );
+
+
+    pointer-events:none;
+
+}
+
+
+
+/*=======================================================
+    HEADER CHILDREN
+=======================================================*/
+
+
+.profile-head > *{
+
+    position:relative;
+
+    z-index:var(--z-content);
+
+}
+
+
+
+/*=======================================================
+    REMOVE DEFAULT HISTORY BLOCK
+=======================================================*/
+
+
+.profile-head .c-history{
+
+    display:none;
+
+}
+
+
+
+/*=======================================================
+    LEFT COLUMN
+=======================================================*/
+
+
+.profile-head .c-brief{
+
+    grid-column:1;
+
+    align-self:end;
+
+}
+
+
+
+/*=======================================================
+    CENTER INFO
+=======================================================*/
+
+
+.profile-head .head{
+
+    grid-column:2;
+
+    align-self:end;
+
+    margin-bottom:40px;
+
+}
+
+
+
+/*=======================================================
+    RIGHT STATS
+=======================================================*/
+
+
+.profile-head .c-info{
+
+    grid-column:3;
+
+    align-self:end;
+
+}
+
+
+
+/*=======================================================
+    CONTENT COLUMNS
+=======================================================*/
+
+
+.l-content{
+
+    display:grid;
+
+    grid-template-columns:
+
+        minmax(0,1fr)
+
+        340px;
+
+
+    gap:var(--content-gap);
+
+}
+
+
+
+/*=======================================================
+    BLOCK STACK
+=======================================================*/
+
+
+.c-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--section-gap);
+
+}
+
+
+
+/*=======================================================
+    MOBILE BASE
+=======================================================*/
+
+
+@media(max-width:1200px){
+
+
+    .profile-head{
+
+
+        grid-template-columns:
+
+            1fr;
+
+
+        min-height:auto;
+
+
+        padding:35px;
+
+    }
+
+
+
+    .profile-head .c-brief,
+    .profile-head .head,
+    .profile-head .c-info{
+
+
+        grid-column:1;
+
+        justify-self:center;
+
+        text-align:center;
+
+    }
+
+
+
+    .profile-content,
+    .l-content{
+
+
+        grid-template-columns:
+
+            1fr;
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    .l-page{
+
+        padding:
+
+            15px;
+
+    }
+
+
+
+    .profile-head{
+
+        padding:25px;
+
+        border-radius:22px;
+
+    }
+
+
+
+}
